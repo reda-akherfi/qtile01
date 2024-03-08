@@ -3,5 +3,5 @@
 kill $(pgrep sxhkd)
 sxhkd &
 redshift -x
-redshift -O 4000
+redshift -O 3000
 
