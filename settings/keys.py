@@ -1,5 +1,6 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key, KeyChord
+from libqtile.extension import WindowList
 
 mod = "mod4"
 terminal = "alacritty"
@@ -53,7 +54,7 @@ keys = [
         desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawn("dmenu_run -fn 'Roboto Mono-16' -l 10 -nb '#333333' -nf '#f5f5f5' -sf '#268bd2' -sb '#ffffff'"),
+    Key([mod], "r", lazy.spawn("dmenu_run -fn 'JetBrainsMono Nerd Font-16' -l 10 -nb '#333333' -nf '#f5f5f5' -sf '#268bd2' -sb '#ffffff'"),
         desc="Spawn a command using a prompt widget"),
 
     # setting up redshift

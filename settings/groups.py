@@ -31,11 +31,13 @@ scratchpads = [ScratchPad('scratchpad',
                                   **scratch_dict)])]
 
 groupies = [# Group(i) for i in ["  ", "  󱨠", "  ", "  ", "  "],
-            Group(name="1", label="  "),
-            Group(name="2", label=" 󱨠 "),
-            Group(name="3", label="  "),
-            Group(name="4", label="  "),
-            Group(name="5", label="  "),
+            Group(name="1", label=" 1 "),
+            Group(name="2", label=" 2 "),
+            Group(name="3", label=" 3 ", layout="max"),
+            Group(name="4", label=" 4 "),
+            Group(name="5", label=" 5 ", persist=False),
+            Group(name="6", label=" 6 ", persist=False),
+            Group(name="7", label=" 7 ", persist=False),
             ]
 
 groups = scratchpads + groupies

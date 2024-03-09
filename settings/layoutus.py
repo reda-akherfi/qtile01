@@ -3,12 +3,12 @@ from libqtile.config import Match
 
 layouts = [
     layout.Columns(border_width=3, border_focus="#ffffff"),
-    # layout.Max(),
+    layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(border_focus="#800080"),
+    # layout.MonadTall(border_focus="#800080"),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
