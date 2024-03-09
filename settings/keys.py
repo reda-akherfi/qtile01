@@ -80,6 +80,8 @@ keys = [
 
     # running the vm
     Key([mod], "v", lazy.spawn("sudo /home/reda/.config/qtile/scripts/win10.sh")),
+    # running window list
+    Key([mod, "control"], "l", lazy.run_extension(WindowList())),
 
     # Qutebrowser mode
     KeyChord([mod], "b", [
@@ -94,8 +96,8 @@ keys = [
             "qutebrowser  --target window --set zoom.default 125 https://gemini.google.com/app")),
         Key([], "m", lazy.spawn("qutebrowser --target window --set zoom.default 125 http://m.inpt.ac.ma/my/ ':open -t https://gemini.google.com/app;;open -t https://chat.openai.com/;;open -t https://web.whatsapp.com/'")),
     ],
-        mode=True,
-        name="browser mode"
+        #mode=True,
+        #name="browser mode"
     ),
 
     # Software mode
@@ -103,9 +105,10 @@ keys = [
         Key([], "f", lazy.spawn("kitty -e vifm")),
         Key([], "l", lazy.spawn("libreoffice")),
         ], 
-             mode=True,
-             name="software mode",
+             #mode=True,
+             #name="software mode",
             ),
+
 
 ]
 # MOVE/RESIZE FLOATING WINDOW
@@ -115,4 +118,4 @@ for key, x, y in [
         ("Up", 0, -10),
         ("Down", 0, 10)]:
     keys.append(Key([mod, "control"], key, lazy.window.move_floating(x, y)))
-    keys.append(Key([mod, "shift"], key, lazy.window.resize_floating(x, y)))
+    # keys.append(Key([mod, "shift"], key, lazy.window.resize_floating(x, y)))
